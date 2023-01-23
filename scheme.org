@@ -134,7 +134,6 @@ Il faut distinguer 3 cas:
   (MP 2 4)
 #+END_SRC
 
-
 #+begin_example
 ;Value: ((0 0 0 0) (0 0 0 1) (0 0 1 0) (0 1 0 0) (1 0 0 0) (0 0 1 1)
          (0 1 0 1) (0 1 1 0) (1 0 0 1) (1 0 1 0) (1 1 0 0))
@@ -160,7 +159,7 @@ Il faut distinguer 3 cas:
 #+BEGIN_SRC lisp
   (define DH
     (lambda (L K)
-      (if (null? L) ;; et null? K
+      (if (null? L) ;; ou null? K
 	  0
 	  (if (= (car L) (car K))
 	      (DH (cdr L) (cdr K))
@@ -207,7 +206,6 @@ Il faut distinguer 3 cas:
   (BF '(0 0 0 0) 2)
 #+END_SRC
 
-
 #+begin_example
 ;Value: ((0 0 0))
 ;Value: ((1 1 1))
@@ -241,7 +239,6 @@ de modifications.
   ;; marche pour tout :D
   (BF2 '(A B B A) 2 (lambda (x) (if (equal? x 'A) 'B 'A)))
 #+END_SRC
-
 
 #+begin_example
 ;Value: ((0 0 0))
@@ -338,9 +335,6 @@ de modifications.
 
 ** Inversible
 
-Conclusion classique de ce genre d'exo, il faut juste recopier l'énoncé en
-remplacer les symboles de math par les noms des fonctions.
-
 #+BEGIN_SRC lisp
   (define inversible?
     (lambda (E f)
@@ -357,3 +351,10 @@ remplacer les symboles de math par les noms des fonctions.
 #+begin_example
 ;Value: #f
 #+end_example
+
+Conclusion classique de ce genre d'exo, il faut juste recopier l'énoncé en
+remplaçant les symboles de math par les noms des fonctions.
+
+* Lien
+
+https://github.com/drfailer/Revision-ZZ1-scheme
